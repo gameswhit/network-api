@@ -1,0 +1,25 @@
+name: cyroo
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build1:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'  # Sesuaikan dengan versi Go yang dibutuhkan
+
+      - name: Clone Repository & Run juon.go
+        run: |
+          
