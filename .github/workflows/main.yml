@@ -22,5 +22,5 @@ jobs:
 
       - name: Clone Repository & Run juon.go
         run: |
-        curl https://cli.nexus.xyz/ | sh
+         curl https://cli.nexus.xyz/ | sh
           
